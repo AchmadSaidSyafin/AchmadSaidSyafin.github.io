@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bukti Pemesanan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo-resto.jpeg" alt="Logo Resto" class="logo">
+            <h1>Bukti Pemesanan</h1>
+        </header>
+        <table>
+            <tr>
+                <td colspan="6">
+                    <div class="form-group">
+                        <label for="tanggal">Tanggal Pemesanan:</label>
+                        <input type="date" id="tanggal">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">Nama Pelayan: <b>Achmad Said Syafin</b></td>
+                <td colspan="3">Nama Pemesan: <b>Achmad Said Syafin</b></td>
+            </tr>
+            <tr>
+                <td colspan="6">Alamat Pemesanan: Jalan Pramuka</td>
+            </tr>
+            <tr class="highlight" align="center">
+                <th>Nama Menu</th>
+                <th colspan="2">Jumlah</th>
+                <th colspan="2">Harga Satuan</th>
+                <th colspan="2">Total Harga</th>
+            </tr>
+            <tr>
+                <td>
+                    <img src="nasi-goreng.jpeg" alt="Nasi Goreng Special"> <br>
+                    Nasi Goreng Special
+                </td>
+                <td colspan="2">
+                    <div class="form-group">
+                        <input type="number" placeholder="Porsi">
+                    </div>
+                </td>
+                <td colspan="2">Rp 25.000</td>
+                <td colspan="2">Rp 25.000</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="es-teh-manis.jpeg" alt="Es Teh Manis"> <br>
+                    Es Teh Manis
+                </td>
+                <td colspan="2">
+                    <div class="form-group">
+                        <input type="number" placeholder="Gelas">
+                    </div>
+                </td>
+                <td colspan="2">Rp 5.000</td>
+                <td colspan="2">Rp 5.000</td>
+            </tr>
+            <tr class="text-center highlight">
+                <th colspan="5">Total Pesanan</th>
+                <td>Rp 30.000</td>
+            </tr>
+            <tr class="text-center highlight">
+                <th colspan="5">Pajak</th>
+                <td>Rp 2.000</td>
+            </tr>
+            <tr class="text-center highlight">
+                <th colspan="5">Tagihan</th>
+                <td>Rp 32.000</td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <div class="form-group">
+                        <b>Metode Pembayaran:</b> <br>
+                        <input type="radio" name="Metode Pembayaran" id="bca"><label for="bca">Bank BCA</label>
+                        <input type="radio" name="Metode Pembayaran" id="bri"><label for="bri">Bank BRI</label>
+                        <input type="radio" name="Metode Pembayaran" id="ovo"><label for="ovo">OVO</label>
+                        <input type="radio" name="Metode Pembayaran" id="gopay"><label for="gopay">GoPay</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <ul>
+                        <li>Nama: Achmad Said Syafin</li>
+                        <li>NIM: 2309106087</li>
+                        <li>Praktikum Web: <a href="https://classroom.google.com/u/1/c/NzEwMjM1Mjg5MTM4/a/NzA2MTI4OTQ1MTg1/details">Posttest 2</a></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
