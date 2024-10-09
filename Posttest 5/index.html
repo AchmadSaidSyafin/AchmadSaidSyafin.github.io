@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="burger" id="burger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="dropdown" id="dropdown">
+            <h2 class="logo">STEAK HOUSE</h2>
+            <div class="menu" id="menu">
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <button id="toggleMode"><img src="darkmode.png" alt="darkmode" id="toggleicon"></button>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="konten">
+            <h2>Steak House</h2>
+            <p>Selamat datang di Steak House Kami</p>
+            <button onclick="popUp()">Pesan Sekarang</button>
+        </div>
+    </main>
+    
+    <div class="about">
+        <h2>About Me</h2>
+        <p>Hai saya achmad said syafin ini adalah website steak house saya</p>
+    </div>
+
+    <!-- Order Form Section -->
+    <div class="order-form">
+        <h2>Pesan Sekarang</h2>
+        <form id="orderForm" action="process.php" method="post">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="date">Tanggal:</label>
+            <input type="date" id="date" name="date" required>
+            <br>
+            <label for="order">Pesanan:</label>
+            <textarea id="order" name="order" required></textarea>
+            <br>
+            <button type="submit">Kirim Pesanan</button>
+        </form>
+        
+
+    </div>
+
+    <footer>
+        <h2>©STEAK HOUSE</h2>
+    </footer>
+
+    <script>
+        // Popup function to show order details
+        function popUp(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            
+            const name = document.getElementById('name').value;
+            const date = document.getElementById('date').value;
+            const order = document.getElementById('order').value;
+
+            // Display the details in an alert
+            alert(`Nama: ${name}\nTanggal: ${date}\nPesanan: ${order}`);
+        }
+
+        // Attach the popUp function to the form's submit event
+        document.getElementById('orderForm').addEventListener('submit', popUp);
+    </script>
+</body>
+</html>
