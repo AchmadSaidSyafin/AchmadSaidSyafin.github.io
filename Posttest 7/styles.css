@@ -1,0 +1,262 @@
+:root{
+    --bg:white;
+    --teks:rgb(127, 29, 29);
+    --btn:rgb(127, 29, 29);
+
+}
+.dark {
+    --bg:black;
+    --teks:white;
+    --btn:#fca5a5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    transition: 0.3s;
+}
+
+body{
+    color: var(--teks);
+    background-color: var(--bg);
+}
+
+header{
+    width: 100%;
+    padding: 1rem;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+header .dropdown{
+display: flex;
+justify-content: space-between;
+padding: 2rem;
+}
+
+
+header .menu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:1rem;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+header .menu ul button{
+    background-color: var(--btn);
+}
+header .menu ul button img{
+    width: 40%;
+}
+
+header .burger {
+    width: 2rem;
+}
+
+header .burger .bar{
+    width: 100%;
+    margin-bottom: 0.2rem;
+    height: 0.25rem;
+    background-color: var(--teks);
+}
+
+main{
+    background: url('ST$.jpeg') no-repeat center center/cover;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 12rem;
+    height: 100vh;
+}
+
+.konten{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+ .konten h2{
+    font-size: 3rem;
+}
+
+ .konten p{
+    font-size: 1.75rem;
+    font-weight: 300;
+}
+
+.konten button{
+    width: 30%;
+    padding: 0.5rem;
+    background-color: var(--btn);
+    color: var(--bg);
+    border-radius: 24px;
+    font-size: 2rem;
+    border: none;
+}
+
+.about{
+    text-align: center;
+    margin-bottom: 4rem;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.about h2{
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+.about p{
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+footer{
+    width: 100%;
+    background-color: var(--btn);
+    text-align: center;
+    padding: 1rem;
+    color: var(--bg);
+    margin-top: 8rem;
+}
+
+@media only screen and (max-width: 480px){
+    .burger{
+        display: block;
+    }
+    header .dropdown{
+        font-size: 14px;
+        position: fixed;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+        top: 80px;
+        left: -200px;
+        width: 40%;
+        height: 40%;
+        background-color: var(--bg);
+        padding: 1.5rem;
+        display: flex;
+        transition: all 0.5s ease;
+
+    }
+
+    header .menu ul{
+        flex-direction: column;
+    }
+    .dropdown.active{
+        left: 0;
+    }
+}
+.order-form {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 2rem; /* Padding inside the form */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 500px; /* Maximum width */
+    margin: 2rem auto; /* Center the form */
+}
+
+.order-form h2 {
+    text-align: center; /* Center the title */
+    margin-bottom: 1.5rem; /* Space below the title */
+    color: var(--teks); /* Text color */
+}
+
+.order-form label {
+    font-size: 1.2rem; /* Larger font size for labels */
+    margin-bottom: 0.5rem; /* Space below labels */
+    display: block; /* Block display to stack labels */
+}
+
+.order-form input[type="text"],
+.order-form input[type="date"],
+.order-form textarea {
+    width: 100%; /* Full width inputs */
+    padding: 0.8rem; /* Padding inside inputs */
+    margin-bottom: 1rem; /* Space below inputs */
+    border: 2px solid var(--btn); /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    transition: border-color 0.3s; /* Smooth transition for focus */
+}
+
+.order-form input[type="text"]:focus,
+.order-form input[type="date"]:focus,
+.order-form textarea:focus {
+    border-color: rgb(255, 105, 180); /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+.order-form button {
+    background-color: var(--btn); /* Button background color */
+    color: var(--bg); /* Button text color */
+    padding: 0.75rem; /* Padding inside button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.order-form button:hover {
+    background-color: rgba(255, 105, 180, 0.8); /* Lighter color on hover */
+}
+
+/* Login Form Styles */
+.login-form {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 2rem; /* Padding inside the form */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 400px; /* Maximum width for the login form */
+    margin: 2rem auto; /* Center the form */
+}
+
+.login-form h2 {
+    text-align: center; /* Center the title */
+    margin-bottom: 1.5rem; /* Space below the title */
+    color: var(--teks); /* Text color */
+}
+
+.login-form label {
+    font-size: 1.2rem; /* Larger font size for labels */
+    margin-bottom: 0.5rem; /* Space below labels */
+    display: block; /* Block display to stack labels */
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%; /* Full width inputs */
+    padding: 0.8rem; /* Padding inside inputs */
+    margin-bottom: 1rem; /* Space below inputs */
+    border: 2px solid var(--btn); /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    transition: border-color 0.3s; /* Smooth transition for focus */
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: rgb(255, 105, 180); /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+.login-form button {
+    background-color: var(--btn); /* Button background color */
+    color: var(--bg); /* Button text color */
+    padding: 0.75rem; /* Padding inside button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.login-form button:hover {
+    background-color: rgba(255, 105, 180, 0.8); /* Lighter color on hover */
+}
